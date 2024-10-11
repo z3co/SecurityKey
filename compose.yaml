@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: security-key-container
+    command: npm run start
+    ports:
+      - 2309:2309
+    volumes:
+      - .:/code
+    env_file:
+      - .env
